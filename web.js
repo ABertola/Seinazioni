@@ -1,6 +1,10 @@
 var express = require('express');
  
 var app = express();
+
+app.get('/', function(req, res) {
+    res.send([{casa: "Vaffanculo", ospite: "Inghilterra"}, {casa: "Italia", ospite: "Irlanda"}]);
+});
  
 app.get('/partite', function(req, res) {
     res.send([{casa: "Galles", ospite: "Inghilterra"}, {casa: "Italia", ospite: "Irlanda"}]);
